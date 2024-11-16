@@ -1,5 +1,7 @@
 # open-webui
 
+![msedge_RPjqBl8yNq](https://github.com/user-attachments/assets/e153e64b-4c05-4fbb-8315-9604817679f4)
+
 Run Open WebUI seamlessly using the OpenAI API or llama models.
 
 | [:sparkles: Getting Started](#getting-started) | [:rocket: Quick Setup](#quick-setup) |
