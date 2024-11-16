@@ -1,0 +1,18 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    volumes:
+      - open-webui:/app/backend/data
+    ports:
+      - "3010:8080"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY} # Agrega tu clave API de OpenAI aquí
+      WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY} # Cambia esto si necesitas un token de seguridad para el WebUI
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+
+volumes:
+  open-webui:
+    name: open-webui
