@@ -26,11 +26,28 @@ Before starting, ensure you have the following installed:
    git clone https://github.com/germanfica/open-webui-docker.git open-webui
    cd open-webui
    ```
-2. Ensure your OpenAI API key is correctly set in the environment configuration. Create a `.env` file if necessary:
+2. Ensure your OpenAI API key is correctly set in the environment configuration. You have two options:
+   - __Option 1: Use a `.env` file__
 
-   ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
+      Create a .env file and add your API key:
+      ```env
+      OPENAI_API_KEY=your_openai_api_key_here
+      ```
+   - __Option 2: Export the API key directly__
+
+      If you prefer not to use a `.env` file, you can export the API key directly to your operating system's environment variables:
+
+      __Export in PowerShell:__
+      ```powershell
+         setx OPENAI_API_KEY "your_api_key_here"
+      ```
+
+      __Export on macOS or Linux:__
+      ```
+         export OPENAI_API_KEY="your_api_key_here"
+      ```
+
+      Make sure to replace `your_api_key_here` with the actual API key obtained from the OpenAI dashboard. For detailed instructions on creating and exporting an API key, refer to the [OpenAI Quickstart Guide](https://platform.openai.com/docs/quickstart#create-and-export-an-api-key).
 
 ## Start the Service
 
